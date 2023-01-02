@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: inherit;
+}
+:root{
+    --bg-primary:white;
+    --swhite:rgb(242, 242, 247);
+    --swhite1:rgb(247, 245, 245);
+    --con_width:1300px;
+    --w98:98%;
+    --w95:95%;
+    --bluish-white:rgb(233, 234, 239);
+    --pblue:rgba(31, 95, 233, 0.968);
+    --text-black:black;
+    --w1200px:1200px;
+    --box-shadow:0 0 3rem rgb(198, 196, 196),
+    0 0 3rem rgba(0, 0, 0, 0.244);
+    --box-shadow1:0 0 3rem rgba(193, 221, 237, 0.474),
+    0 0 1rem rgba(151, 154, 164, 0.244);
+    --transition:all .7s ease-in-out;
+    --transition1:.5s all ease-in-out;
+    --head-col:rgb(3, 32, 79);
+    --palblue:rgb(53, 53, 74);
+    --light-green:rgb(17, 242, 17);
+    --svg-col:rgb(151, 151, 151);
+    --ow:14px;
+    --ze:0;
+
+}
+body{
+    background: var(--swhite);
+    font-family: tahoma;
+}
+.flex{
+    display: flex;  
+}
+.flex_c{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex_pc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex_sb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex_ar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.active{
+    color: var(--palblue) !important;
+    position: relative;
+}
+.active::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    box-shadow: 0 0 1px var(--palblue) !important;
+    background: var(--palblue);
+}
+.none{
+    display: none;
+}
+.container{
+    width: var(--con_width);
+    margin: 0 auto;
+    gap: 1rem;
+}
+.v_nav{
+    /* border: solid black; */
+    width: 14rem;
+    background: var(--bg-primary);
+}
+.brand{
+    padding-left: 8px;
+    user-select: none;
+}
+.brand .logo{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.brand .name{
+    align-self: flex-end;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: tahoma;
+}
+.span{
+    font-family:   'Trebuchet MS' !important; 
+    
+}
+.brand .name span, .note p strong span{
+    font-size: 1rem;
+    font-family:   'Trebuchet MS';
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* +++++++++++++++++++VERTICAL LINKS+++++++  */
+/* +++++++++++++++++++VERTICAL LINKS+++++++  */
+/* +++++++++++++++++++VERTICAL LINKS+++++++  */
+.v_nav{
+    padding: 1rem 1px;
+}
+.links{
+    margin-top: 2.5rem;
+}
+.links ul li{
+    list-style: none;
+}
+:is(.links ul li) a,p{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 1.03rem;
+    user-select: none;
+    
+}
+.links ul li{
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+.link_drop{
+    max-height: var(--ze); 
+    opacity: var(--ze);
+    visibility: hidden;
+    background: var(--swhite1);
+    transition: all .8s ease !important;
+}
+.link_drop *{
+    opacity: 0;
+    letter-spacing: 1px;
+    transition: all .8s ease !important;
+    
+}
+.vt{
+    visibility: visible !important;
+    max-height: 6rem !important;
+    opacity: 1;
+    padding: 1rem 0;
+}
+.vt *{
+    opacity: 1;
+}
+
+.vs{
+    visibility: visible !important;
+    max-height: 9rem !important;
+    opacity: 1;
+    padding: 1rem 0;
+}
+.vs *{
+    opacity: 1;
+}
+.p_w{
+    position: relative;
+}
+.p_w svg:nth-child(3){
+    transition: all .8s ease !important;
+    font-size: var(--ow);
+    margin-left: 8px;
+    position: absolute;
+    right: 15%;
+}
+svg.arrow{
+    transform: rotate(-180deg) !important;
+}
+.link_drop a{
+    display: block;
+    transform: scale(0.94);
+}
+.link_drop a:first-child{
+    margin-bottom: 1rem;
+}
+.link_drop.vs_m a:nth-child(2){
+    margin-bottom: 1rem;
+}
+/* +++++++++++++++++++horizontal LINKS+++++++  */
+/* +++++++++++++++++++horizontal LINKS+++++++  */
+/* +++++++++++++++++++horizontal LINKS+++++++  */
+.user_details{
+    gap: 15px;
+    user-select: auto;
+    user-select: all !important;
+    transition: all 1s ease;
+}
+.user_details .img{
+    width: 2.2rem;
+    height: 2.2rem;
+    /* border: solid black; */
+    /* padding: 1rem; */
+    border-radius: 50%;
+}
+.h_nav{
+    padding: 1rem 9px;
+    position: relative;
+}
+.h_nav .title{
+    font-size: 1.5rem;
+    color: var(--palblue);
+    font-family:  sans-serif;
+    gap: 12px;
+    transition: all 1s ease;
+}
+.wrap_main{
+    /* border: solid red; */
+    width: calc(100% - 15rem);
+    transition: all 1s ease !important;
+}
+.user_details .noti{
+    position: relative;
+    color: rgb(188, 196, 195);
+    background: var(--bg-primary);
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+}
+.noti_abs{
+    position: absolute;
+    color: var(--bg-primary);
+    top: -8px;
+    right: -6px;
+    background: var(--light-green);
+    width: 1.26rem;
+    height: 1.26rem;
+    border-radius: 50%;
+    font-size: 12px;
+    z-index: 2 !important;
+    color: white;
+}
+.user_name{
+    gap: 9px;
+    position: relative;
+}
+.user_name p{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--palblue);
+    cursor: auto;
+}
+.pointer{
+    cursor: pointer;
+}
+.user_name svg{
+    color: var(--svg-col);
+    font-size: var(--ow);
+}
+
+
+
+.main_content{
+    margin-top: 14px;
+    background: var(--bg-primary);
+    padding:10px 19px;
+    border-radius: 8px;
+}
+
+.fa-bars{
+    font-size: 1.8rem;
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+@media screen and (max-width: 1330px) {
+    :root{
+        --con_width:98%;
+    }
+    body{
+        /* background: red; */
+    }
+}
+/* 125 */
+@media screen and (max-width: 1230px) {
+    body{
+        /* background: red; */
+    }
+    .v_nav{
+        position: absolute;
+        /* display: none; */
+        left: -25%;
+        transition: all 1s ease;
+    }
+    .v_nav_toggle{
+        left: 0;
+    }
+    .fa-bars{
+        font-size: 1.8rem;
+        display: block;
+
+    }
+    .wrap_main{
+        width: 100%;
+    }
+    .wrap_main_toggle{
+        /* width: calc(100% - 15rem); */
+        /* margin: 0 0 0 auto; */
+        margin-left: 15rem;
+    }
+}
+@media screen and (max-width: 898px){
+    .v_nav{
+        left: -30%;
+        transition: all 1s ease;
+    }
+    .v_nav_toggle{
+        left: 0;
+    }
+}
+@media screen and (max-width: 757px){
+    .v_nav{
+        left: -40%;
+        transition: all 1s ease;
+    }
+    .v_nav_toggle{
+        left: 0;
+    }
+}
+@media screen and (max-width: 565px){
+    .v_nav{
+        left: -50%;
+        transition: all 1s ease;
+    }
+    .v_nav_toggle{
+        left: 0;
+    }
+}
+@media screen and (max-width: 453px){
+    .v_nav{
+        left: -70%;
+        transition: all 1s ease;
+    }
+    .v_nav_toggle{
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 613px) {
+
+}
+
+
+@media screen and (max-width: 381px) {
+    .v_nav{
+        position: absolute;
+        transition: all 1s ease;
+        
+    }
+    .v_nav_toggle{
+        left: 0;
+        width: 100%;
+    }
+    .h_nav .title{
+        font-size: 1rem;
+    }
+    .fa-bars{
+        font-size: 1rem;
+    }
+    .user_details .img{
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+    .user_details .noti{
+        width: 1.6rem;
+        height: 1.6rem;        
+    }
+    .noti_abs{
+        top: -3px;
+        right: -3px;
+        width: .7rem;
+        height: .7rem;
+        font-size: 8px;
+    }
+
+    .user_name p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 323px){
+    .v_nav{
+        left: -100%;
+        transition: all 1s ease;
+    }
+    .v_nav_toggle{
+        left: 0;
+    }
+}
+@media screen and (max-width: 285px){
+    .fa-bars_ab{
+        position: absolute;
+        left: 70%;
+    }
+}
+
+
+@media screen and (max-width: 225px){
+    .v_nav{
+        left: -150%;
+        transition: all 1s ease;
+    }
+    .v_nav_toggle{
+        left: 0;
+    }
+}
+
+.fa-bars_ab{
+    position: absolute;
+    left: 70%;
+}
+.user_hide{
+    display: none !important;
+    opacity: 0;
+    /* transition: all 1s ease; */
+}
+#dash{
+    opacity: 1;
+    transition: all .4s ease;
+    animation: hi 1s ease;
+}
+@keyframes hi {
+    0%{
+        opacity: 0;
+        font-size: xx-small;
+    }
+    70%{
+        opacity: 0;
+        font-size: 1rem;
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+.user_details{
+    animation: hi 1s ease;
+}

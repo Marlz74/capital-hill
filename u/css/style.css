@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--bg-primary);
+}
+p,span{
+    line-height: 1.3rem;
+}
+
+img{
+    width: 100%;
+    object-fit: cover !important;
+    height: 100%;
+    border-radius: inherit;
+}
+.p2{
+    padding-left:2rem ;
+    padding-right: 2rem;
+}
+video,img{
+    max-width: 100% !important;
+    object-fit: cover !important;
+    overflow-x: hidden !important;
+}
+:root{
+    --bg-primary:white;
+    --swhite:rgb(242, 242, 247);
+    --con_width:1300px;
+    --w98:98%;
+    --w95:95%;
+    --bluish-white:rgb(233, 234, 239);
+    --pblue:rgba(31, 95, 233, 0.968);
+    --text-black:black;
+    --w1200px:1200px;
+    --box-shadow:0 0 7rem rgba(253, 251, 251, 0.957),
+    0 0 10rem rgba(0, 0, 0, 0.044);
+    --box-shadow1:0 0 3rem rgb(193, 221, 237),
+    0 0 1rem rgba(151, 154, 164, 0.244);
+    --transition:all .7s ease-in-out;
+    --transition1:.5s all ease-in-out;
+    --head-col:rgb(3, 32, 79);
+    --palblue:rgb(53, 53, 74);
+    --light-green:rgb(17, 242, 17);
+    --border-col:rgba(0, 0, 0, 0.23);
+
+}
+.fcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.fbtw{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.far{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup{
+    width: 38rem;
+    padding: 2rem;
+    
+}
+.signin{
+    width: 25rem;
+    padding: 4rem 2rem;
+}
+.wrap{
+    
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 4px;
+    font-family: sans-serif;
+}
+.wrap h1{
+    font-size: 2rem;
+    margin-left: .8rem;
+    transform: scale(1.04);
+
+}
+form p{
+    text-align: right;
+    left: 1px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+form .p a{
+    color: var(--pblue);
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: 600;
+}
+form .pd{
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: left;
+}
+form .pd a{
+    color: inherit;
+}
+.brand{
+    user-select: none !important;
+    gap: 2px;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+.brand .logo{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.brand .name{
+    align-self: flex-end;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+.span{
+    font-family:   'Trebuchet MS' !important; 
+    
+}
+.brand .name span{
+    font-size: 1rem;
+    font-family:   'Trebuchet MS';
+}
+.none{
+    display: none;
+}
+.cov{
+    background: inherit;
+    overflow-y: hidden;
+}
+form{
+    margin-top: 2.5rem;
+}
+.form_control{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap !important;
+    margin-bottom: 1rem;
+    
+}
+.form_control .input{
+    width: 45%;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-col);
+    flex-grow: 2;
+}
+input{
+    background: var(--bg-primary);
+    
+}
+.in{
+    width: 100%;   
+    height: 100%;
+    border-radius: inherit;
+    outline: none;
+    font-size: 1.03rem;
+}
+.i{
+    width: calc(100% - 2.6rem);   
+    height: 100%;
+    border-radius: inherit;
+    outline: none;
+    border: none;
+    font-size: 1.03rem;
+
+}
+.sin input{
+    height: 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-col);
+
+}
+.sin{
+    margin-bottom: 1rem;
+}
+.ji span svg{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.383);
+}
+.ji{
+    position: relative;
+    z-index: 999;
+    height: 100%;
+    cursor: pointer;
+    background: var(--bg-primary);
+    border-radius: inherit;
+    width: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-left: 3px;
+}
+.drop{
+    position: absolute;
+    left: 0;
+    top: 106%;
+    border:1px solid rgba(8, 8, 8, 0.227);
+    background: var(--bg-primary);
+    padding:2px 8px;
+    width: 20rem;
+    height: 12rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: auto;
+    border-radius: 8px;
+
+}
+
+.drop_active{
+    border-bottom: 1px solid rgba(4, 4, 4, 0.268);
+}
+
+.opt{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding:8px 9px ;
+    gap: 6px;
+    cursor: pointer;
+}
+.opt:hover{
+    background: rgb(232, 239, 239);
+}
+.input.password{
+    position: relative;
+}
+.input.password svg{
+    font-size: 1rem;
+    color: grey;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    
+}
+
+.input input{
+    padding: 0 8px;
+}
+.submit_con input{
+    background: var(--pblue);
+    margin-top: 1.2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--bg-primary);
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+@media screen and (max-width: 988px) {
+    .brand{
+        top: 1px;
+        left: 1px;
+    }   
+}
+@media screen and (max-width: 634px){
+    .signup{
+        width: 90%;
+        
+    }
+
+}
+@media screen and (max-width: 573px){
+    .signup{
+        width: 95%;
+        
+    }
+    .wrap{
+        margin: 2rem 0;
+    }
+    .brand{
+        top: 2px;
+        left: 2px;
+    }
+    .form_control{
+        flex-direction: column;
+    }
+    .form_control .input{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 513px){
+    .brand{
+        display: none;
+    }   
+}
+
+@media screen and (max-width: 426px){
+    .signin{
+        width: 90%;
+    }
+}
